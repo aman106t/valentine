@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">I know.....I know......there's no need for this, but still </h1>
+            <h1 class="header_text">My pyaari Nautanki.....will you be my valentine ???</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzU4ZjJlMHduODBxYTgxMmY4MmwycjdhdXZ5c3M2dWN1YjR1NjR6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AXhbp00D9dxF9BCqpn/giphy.gif" alt="cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesbutton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="nobutton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <script>
+                function nextPage() {
+                    window.location.href ="yes.html";
+                }
+
+                const button = document.getElementById("nobutton");
+
+                 button.addEventListener("click", function() {
+                 // Generate random positions within boundaries
+                 const randomTop = Math.floor(Math.random() * window.innerHeight);
+                 const randomLeft = Math.floor(Math.random() * window.innerWidth);
+
+                 // Update button position
+                 button.style.top = randomTop + "px";
+                 button.style.left = randomLeft + "px";
+});
+
+            </script>
+        </div>
+    </div>
+</body>
+</html>
